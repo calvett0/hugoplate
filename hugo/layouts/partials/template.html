@@ -1,0 +1,16 @@
+{{ partial "header.html" . }}
+{{ partial "nav.html" . }}
+{{ partial "navmobile.html" . }}
+
+<!-- Main template -->
+<div class="page-wrapper">
+  <a class="navmobile main-nav-btn" id="burgermenu-toggle" href="#">
+      <span></span>
+  </a>
+  <section class="container-fluid">
+      {{ .Content }}
+  </section>
+</div>
+<!-- End template -->
+
+{{ partial "scripts.html" . }}

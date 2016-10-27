@@ -1,0 +1,123 @@
+
+.main-menu {
+  width: 100%;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-right: none;
+  ul > li {
+    display: inline-block;
+    list-style: none;
+    text-align: center;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #ccc;
+    margin: 0 -0.285em 0 0;
+    width: calc(100% / 3);
+    box-sizing: border-box;
+    position: relative;
+    a {
+        display: block;
+        text-decoration: none;
+        color: #616161;
+        padding: 10px 0;
+    }
+    &:hover {
+      ul {
+        display: block;
+      }
+    }
+    ul {
+      width: 100%;
+      display: none;
+      background: #f0f0f0;
+      position: absolute;
+      left: 0; top: 30px;
+      li {
+        display: block;
+        width: 100%;
+        border: 0;
+      }
+    }
+  }
+}
+.navmobile {
+  display: none;
+}
+a.main-nav-btn {
+  width: 60px; height: 60px;
+  background-color: #f2f2f2;
+  z-index: 1001;
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+  transition: background-color 0.45s ease-in-out;
+  .close {
+    display: none;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+  span {
+    position: relative;
+    display: block;
+    width: 28px; height: 1px;
+    left: 50%;
+    margin-top: 29px;
+    margin-left: -14px;
+    margin-bottom: 23px;
+    background-color: white;
+    font-size: 0px;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+
+    &:before,
+    &:after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: #fff;
+      display: block;
+      position: absolute;
+      transition: 0.4s;
+    }
+    &:before {
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
+    &:after {
+      -webkit-transform: translateY(10px);
+      transform: translateY(10px);
+    }
+  }
+  html.opened-left & {
+    background-color: rgba(56, 42, 42, 0.8);
+    span {
+      background-color: transparent;
+      &:before {
+        -webkit-transform: translateY(0) rotate(45deg);
+        transform: translateY(0) rotate(45deg);
+      }
+      &:after {
+        -webkit-transform: translateY(0) rotate(-45deg);
+        transform: translateY(0) rotate(-45deg);
+      }
+    }
+  }
+}
+
+@include media($tablet){
+  .navdesktop {
+    display: none;
+  }
+  .navmobile {
+    display: inline-block;
+  }
+}

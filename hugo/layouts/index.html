@@ -1,0 +1,5 @@
+{{ range .Data.Pages }}
+{{if eq .Type "index" }}
+    {{ partial "template.html" . }}
+{{end}}
+{{ end }}

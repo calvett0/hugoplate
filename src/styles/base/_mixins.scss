@@ -1,0 +1,41 @@
+//
+// Mixins / Helpers
+//
+
+// Responsive breakpoints
+@mixin media($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// @include clearfix()
+@mixin clearfix {
+  &:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+}
+
+// @extend %clearfix
+%clearfix {
+  &:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+}
+
+.clearfix:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+
+
+// @include svg-bg('name');
+@mixin svg-bg($name) {
+  background-image: image-url('png/#{$name}.png');
+  background-image: none, image-url('svg/#{$name}.svg');
+}

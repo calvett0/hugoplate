@@ -1,0 +1,1 @@
+$(function(){"mobile"!==MQBE.current_state()&&"tablet"!==MQBE.current_state()||$("#main-menumobile").burgermenu(),CPC.init({lang:"es",show_only_once:!0})}),$(document).on("enter.mobile.mqbe",function(){$("#main-menumobile").burgermenu()}).on("leave.mobile.mqbe",function(){});
