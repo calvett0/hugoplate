@@ -1,6 +1,6 @@
 hugoplate
 ======
-
+<img src="hugoplate.png" alt="HugoPlate" align="left" style="float:left;margin-right:20px;margin-bottom:40px;">
 hugoplate is a starter boilerplate project for [Hugo](http://gohugo.io) + [Gulp](http://gulpjs.com), based on hugulp (https://github.com/jbrodriguez/hugulp) all credits to
 [Juan B. Rodriguez](http://jbrodriguez.io) for the gulp integration
 
