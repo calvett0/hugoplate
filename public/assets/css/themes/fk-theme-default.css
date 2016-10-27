@@ -1,0 +1,111 @@
+/*!
+ * Formikation 0.2.7
+ * Formikation is a simple jQuery plugin to beautify form inputs with some css.
+ *
+ * https://github.com/vortizhe/formikation
+ *
+ * Copyright 2016, Victor Ortiz. Licensed under MIT.
+ *
+ * Released on: July 12, 2016
+ */
+.fk-theme-default label {
+  padding-right: 16px;
+  margin-bottom: 0.5em;
+}
+
+.fk-theme-default label.fk-radio:before, .fk-theme-default label.fk-check:before {
+  content: ' ';
+  width: 20px;
+  height: 20px;
+  border: 1px solid #d8d8d8;
+  margin-top: -3px;
+  border-radius: 3px;
+}
+
+.fk-theme-default label.fk-radio:after, .fk-theme-default label.fk-check:after {
+  content: ' ';
+  width: 12px;
+  height: 12px;
+  left: 4px;
+  top: 2px;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.fk-theme-default label.fk-radio:before, .fk-theme-default label.fk-radio:after {
+  border-radius: 50%;
+}
+
+.fk-theme-default label.checked.fk-radio:after, .fk-theme-default label.checked.fk-check:after {
+  background: #2f97e9;
+}
+
+.fk-theme-default .fk-select {
+  padding: 10px;
+  border: 1px solid #d8d8d8;
+  background: #fff;
+  border-radius: 3px;
+  line-height: 1.15;
+}
+
+.fk-theme-default .fk-select:after {
+  content: '\00bb';
+  display: block;
+  float: right;
+  padding: 10px 15px;
+  margin: -10px -15px;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.fk-theme-default .fk-select .fk-select-label {
+  color: #666;
+}
+
+.fk-theme-default .fk-select .fk-select-label.fk-is-placeholder {
+  font-style: italic;
+}
+
+.fk-theme-default .fk-select.fk-select-focus {
+  border-color: #000;
+}
+
+.fk-theme-default .fk-select.fk-select-focus .fl-select-label {
+  color: #000;
+}
+
+.fk-theme-default .fk-select.disabled {
+  opacity: 0.6;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+}
+
+.fk-theme-default .has-fk-select {
+  width: 100%;
+  border: 0;
+}
+
+.fk-theme-default .fk-file-input {
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  line-height: 1.15;
+}
+
+.fk-theme-default .fk-file-input:after {
+  right: 3px;
+  top: 3px;
+  padding: 8px 10px;
+  text-align: center;
+  color: #fff;
+  background-color: #2f97e9;
+  border-radius: 3px;
+  line-height: 1;
+}
+
+.fk-theme-default .fk-file-input.disabled {
+  opacity: 0.6;
+}

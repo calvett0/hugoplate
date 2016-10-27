@@ -1,0 +1,311 @@
+/*
+  base-reset
+  Combine with type-reset.scss to fix typo issues
+*/
+
+body {
+  /* Disable horizontal scrollbar */
+  -ms-overflow-x: hidden;
+  overflow-x: hidden;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+/* Base reset of margins + paddings */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+hr,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0; padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+
+  /* Remove outline color in some Android */
+  /* -webkit-tap-highlight-color: rgba(0, 0, 0, 0); */
+}
+
+/* Set block for HTML5 elements */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+hr,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* Correct display for IE 9 */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* Abreviatures and definitions */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* Force hidden of elements */
+[hidden],
+template {
+  display: none;
+}
+
+/* Images */
+img {
+  margin-bottom: -0.285em; /* Removes extra margin */
+  border: 0 none;
+}
+
+/* SVG */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Reset cursor on any element disabled  */
+[disabled] {
+  cursor: default;
+}
+
+/* Base <hr> customize color on your project */
+hr {
+  height: 1px;
+  border: 0;
+  border-top: 1px solid;
+  overflow: visible;
+  /* border-color: #f00; */
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  // font-variant-ligatures: none;
+  // font-feature-settings: none;
+  font: 400 1em/1.35 serif;
+  text-align: left;
+  vertical-align: baseline;
+  color: #333;
+}
+
+// Genral properties
+body,
+ol, ul, li,
+dl, dt, dd,
+address,
+abbr, dfn,
+blockquote, pre, code, kbd, samp, cite, q,
+figcaption,
+sub, sup, small,
+p, h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  vertical-align: inherit;
+  color: inherit;
+}
+
+// Reset of type elements
+
+b,
+strong {
+  font-weight: 700;
+}
+
+i,
+em,
+dfn {
+  font-style: italic;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+mark {
+  background: #fcf8e3;
+  color: #000;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font: monospace;
+}
+
+pre {
+  white-space: pre; /* CSS2 */
+  white-space: pre-wrap; /* CSS 2.1 */
+  white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word; /* IE */
+}
+
+blockquote, q {
+  quotes: none;
+}
+blockquote:before,
+q:before,
+blockquote:after,
+q:after {
+  content: '';
+  content: none;
+}
+
+small {
+  font-size: 75%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+//
+// Links por defecto
+//
+
+a {
+  background-color: transparent; /* remove IE 10 grey bg on :active */
+}
+a:link,
+a:visited,
+a:active,
+a:hover,
+a:focus {
+  outline: 0;
+}
+// Remove system styles for phone links on iOS
+a[href^="tel"] {
+  color: inherit;
+  text-decoration: none;
+}
+
+//
+// Listas
+//
+ul, ol, li {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* ESTILOS POR DEFECTO */
+/* ul li { list-style: disc outside; } */
+/* ol li { list-style: decimal outside; } */
+//
+// General forms
+//
+
+button, input, select, textarea, fieldset, legend, label, select {
+  font: 400 1em/1.35 inherit;
+  text-align: left;
+  text-transform: none;
+  white-space: normal;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+input,
+select {
+  line-height: normal;
+  vertical-align: middle;
+}
+  /* Remove webkit focus border */
+
+input:focus,
+select:focus {
+  outline: 0;
+}
+/* Fix webkit placeholder vertical position */
+input::-webkit-input-placeholder,
+select::-webkit-input-placeholder {
+  line-height: normal;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+button,
+input[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+optgroup {
+  font-weight: 700;
+}
+
+textarea {
+  overflow: auto;
+}

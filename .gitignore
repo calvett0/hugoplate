@@ -1,5 +1,12 @@
 .DS_Store
-public
+public/css
+public/js
+public/Inicio
+public/404.html
+public/index.html
+public/index.xml
+public/rev-manifest.json
+public/sitemap.xml
 staging
 
 # node
